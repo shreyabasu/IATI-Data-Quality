@@ -1,0 +1,15 @@
+indicator_name,indicator_description,test_name,test_description
+strategy,Strategy,document-link/category[@code='B02'] exists?,Strategy
+annual-report,Annual report,document-link/category[@code='B01'] exists?,Annual report
+allocation,Allocation policy,document-link/category[@code='B04'] exists?,Allocation policy
+total-budget,Total budget,total-budget exists?,Total budget
+total-budget,Total budget,at least one of total-budget/period-end/@iso-date is 1 year from now?,Total budget is available for at least the next year
+total-budget,Total budget,at least one of total-budget/period-end/@iso-date is 2 years from now?,Total budget is available for at least the next two years
+total-budget,Total budget,at least one of total-budget/period-end/@iso-date is 3 years from now?,Total budget is available for at least the next three years
+disaggregated-budget,Disaggregated budget,recipient-country-budget exists?,Recipient country budget
+disaggregated-budget,Disaggregated budget,at least one of recipient-country-budget/period-end/@iso-date is 1 year from now?,At least one country has a budget that runs at least one year from now
+disaggregated-budget,Disaggregated budget,at least one of recipient-country-budget/period-end/@iso-date is 2 years from now?,At least one country has a budget that runs at least two years from now
+disaggregated-budget,Disaggregated budget,at least one of recipient-country-budget/period-end/@iso-date is 3 years from now?,At least one country has a budget that runs at least three years from now
+procurement-policy,Procurement policy,document-link/category[@code='B05'] exists?,Procurement policy
+audit,Audit,document-link/category[@code='B06'] exists?,Audit
+country-strategy,Country Strategy,document-link/category[@code='B03'] exists?,Country strategy paper
