@@ -294,7 +294,8 @@ def _organisation_detail(organisation):
         ).join(Organisation
         ).all()
 
-    pconditions = OrganisationCondition.query.filter_by(organisation_id=organisation.id
+    pconditions = OrganisationCondition.query.filter_by(
+        organisation_id=organisation.id
             ).all()
 
     db.session.commit()
@@ -328,7 +329,8 @@ def _organisation_indicators(organisation, aggregation_type=2):
         ).join(Organisation
         ).all()
 
-    pconditions = OrganisationCondition.query.filter_by(organisation_id=organisation.id
+    pconditions = OrganisationCondition.query.filter_by(
+        organisation_id=organisation.id
             ).all()
 
     return summary.agr_results(aggregate_results, 
