@@ -339,7 +339,8 @@ def _organisation_indicators_split(organisation, aggregation_type=2):
     results = _organisation_indicators(organisation, aggregation_type)
     if not results:
         indicators = dqindicators.indicators("pwyf2013")
-        indicators_restructured = dict(map(lambda x: (x.id, {'indicator': x }), indicators))
+        restructure = lambda x: (x.id, {'indicator': x})
+        indicators_restructured = dict(map(restructure, indicators))
         return {"zero": indicators_restructured,
                 "non_zero": {}}
 
